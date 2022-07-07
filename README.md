@@ -1,4 +1,6 @@
 # Image Uploader
+Built with ReactJS, ExpressJS, Cloudinary, Heroku
+
 ### Requirements
 Create an Image Uploader application with any front-end libraries of your choice.
 

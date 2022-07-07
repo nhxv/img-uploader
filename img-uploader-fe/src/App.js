@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -27,7 +27,6 @@ function App() {
   }
 
   const onCopy = () => {
-    console.log("copy...");
     navigator.clipboard.writeText(imageUrl);
     setCopyMessage("Copied.");
     setTimeout(() => {

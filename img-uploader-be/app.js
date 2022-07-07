@@ -16,7 +16,7 @@ const upload = multer({storage: storage});
 
 const express = require("express");
 const app = express();
-var cors = require("cors");
+const cors = require("cors");
 app.use(cors()); // enable all cors requests
 
 app.post("/api/image", upload.single("image"), async (req, res) => {

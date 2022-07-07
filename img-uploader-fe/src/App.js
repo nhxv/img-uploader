@@ -49,7 +49,7 @@ function App() {
 
   const fetchImage = (formData) => {
     setLoading(true);
-    fetch("http://localhost:4000/api/image", {
+    fetch("https://nhxv-img-uploader-rest.herokuapp.com/api/image", {
       method: "POST",
       body: formData,
     }).then(res => res.json()).then(data => {

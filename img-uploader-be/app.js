@@ -17,10 +17,14 @@ const upload = multer({storage: storage});
 const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(cors()); // enable all cors requests
+app.use(cors({origin: "https://nhxv-img-uploader.herokuapp.com"}));
 
 app.post("/api/image", upload.single("image"), async (req, res) => {
   return res.json({image: req.file.path});
 });
 
-app.listen(4000);
+app.get("/", (req, res) => {
+  res.send("<h1>Hello from rest</h1>");
+})
+
+app.listen(process.env.PORT || 4000);
